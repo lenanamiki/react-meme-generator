@@ -5,8 +5,8 @@ class MemeGenerator extends Component {
   constructor() {
     super();
     this.state = {
-      topText: 'top text',
-      bottomText: 'bottom text',
+      topText: '',
+      bottomText: '',
       image: 'http://i.imgflip.com/1bij.jpg',
       allMemeImgs: []
     };
@@ -17,7 +17,6 @@ class MemeGenerator extends Component {
       .then(response => response.json())
       .then((response) => {
         const { memes } = response.data;
-        console.log(memes[0]);
         this.setState({ allMemeImgs: memes });
       });
   }
@@ -26,9 +25,11 @@ class MemeGenerator extends Component {
     const { topText, bottomText, image } = this.state;
     return (
       <div>
-        <p>{topText}</p>
-        <p>{bottomText}</p>
-        <img src={image} alt="meme" />
+        <form>
+          <input type="text" name="topText" value={topText} placeholder="Enter Text" />
+          <input type="text" name="bottomText" value={bottomText} placeholder="Enter Text" />
+          <button type="submit">GENERATE</button>
+        </form>
       </div>
     );
   }
