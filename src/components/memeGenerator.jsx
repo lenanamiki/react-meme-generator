@@ -4,12 +4,21 @@ import React, { Component } from 'react';
 class MemeGenerator extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      topText: 'top text',
+      bottomText: 'bottom text',
+      image: 'http://i.imgflip.com/1bij.jpg'
+    };
   }
 
   render() {
+    const { topText, bottomText, image } = this.state;
     return (
-      <p>Meme Generator</p>
+      <div>
+        <p>{topText}</p>
+        <p>{bottomText}</p>
+        <img src="{image}" alt="meme" />
+      </div>
     );
   }
 }
