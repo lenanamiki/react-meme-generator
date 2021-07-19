@@ -1,4 +1,6 @@
 import React from 'react';
+import '../assets/stylesheets/application.scss';
+
 import Header from './components/header';
 import MemeGenerator from './components/memeGenerator';
 

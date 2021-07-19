@@ -2,7 +2,10 @@ import React from 'react';
 
 function Header() {
   return (
-    <h1>This is the header</h1>
+    <div className="header">
+      <img className="icon-img" src="http://www.pngall.com/wp-content/uploads/2016/05/Trollface.png" alt="icon" />
+      <h3>Meme Generator</h3>
+    </div>
   );
 }
 
