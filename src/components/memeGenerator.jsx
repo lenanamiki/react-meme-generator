@@ -40,9 +40,9 @@ class MemeGenerator extends Component {
     const { topText, bottomText, image } = this.state;
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <input type="text" name="topText" value={topText} placeholder="Enter Text" onChange={this.handleChange} />
-          <input type="text" name="bottomText" value={bottomText} placeholder="Enter Text" onChange={this.handleChange} />
+        <form className="meme-form container" onSubmit={this.handleSubmit}>
+          <input type="text" name="topText" value={topText} placeholder="Enter top text for meme" onChange={this.handleChange} />
+          <input type="text" name="bottomText" value={bottomText} placeholder="Enter bottom text for meme" onChange={this.handleChange} />
           <button type="submit">GENERATE</button>
         </form>
         <div>
