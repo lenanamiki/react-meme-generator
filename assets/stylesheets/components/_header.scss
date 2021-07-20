@@ -1,9 +1,27 @@
 .header {
+  width: 100%;
+  padding: 16px 32px;
   display: flex;
+  justify-content: center;
   align-items: center;
+  color: #5266a8;
 }
 
 .icon-img {
-  height: 64px;
-  width: 64px;
+  height: 50px;
 }
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 0 8px;
+  h3 {
+  margin: 0 0;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+
